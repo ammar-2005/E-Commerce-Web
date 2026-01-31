@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>online store</title> 
+     <!-- img website -->
+      <link rel="shortcut icon" href="img/icon.png" type="image/x-icon"> 
+      <!-- icons -->
+       <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <!-- link css-->
+     <link rel="stylesheet" href="css/style.css">
+   
+</head>
+<body>
+    <header>
+        <!-- TOP -->
+        <div class="top-header">
+            <div class="container">
+                <a href="#" class="logo"><img src="img/logo.png" alt=""></a>
+
+                <!-- form -->
+                 <form action="" class="search-box">
+                    <div class="select-box">
+                        <select id="category" class="category">
+                             <option value="All Category">All Category</option>
+                             <option value="Electronics & Digita">Electronics & Digita</option>
+                             <option value="Phone & Tablet">Phone & Tablet</option>
+                             <option value="Fashion & Clothings">Fashion & Clothings</option>
+                             <option value="Telivsion & Monitor">Telivsion & Monitor</option>
+                             <option value="Jewelry & Watches">Jewelry & Watches</option>
+                             <option value="Washing & Machine">Washing & Machine</option>
+                             <option value="Toys & Hobbies">Toys & Hobbies</option>
+
+                        </select>
+
+                    </div>
+                      
+                    <input type="text" id="search" name="search" placeholder="Search for Products" required>
+                     
+                    <button type="submit">
+                       <i class="ri-search-line"></i>
+                    </button>
+
+                 </form>
+                 <div class="header-icons">
+    <div class="icon">
+        <a href="#"> 
+            <i class="ri-heart-line"></i>
+            <span class="count count-favorite">0</span> 
+        </a>
+    </div>
+
+    <div class="icon">
+        <a href="#">
+            <i class="ri-shopping-cart-line"></i>
+            <span class="count count-item-header">0</span>
+        </a>
+    </div>
+</div>
+                 </div>
+            </div>
+        </div>
+        <!-- NAV -->
+           
+        <div class="nav-header">
+            <div class="container">
+                    <nav class="nav">
+                    <div class="category-nav">
+                        <div  class="category-btn" onclick=" Opencategory()">
+                            <i class="ri-menu-line"></i>
+                            <p>Browser Category</p>
+                            <i class="ri-arrow-down-s-line">
+                    
+                            </i>
+                        </div>
+                         <div class="category-nav-list" >
+                            <a href="#">Top 10 offers</a>
+                            <a href="#">Electronics & Digita</a>
+                            <a href="#">Phone & Tablet</a>
+                            <a href="#">Fashion & Clothings</a>
+                            <a href="#">Telivsion & Monitor</a>
+                            <a href="#">Jewelry & Watches</a>
+                            <a href="#">Toys & Hobbies</a>
+                         </div>
+                    </div>
+                    <ul class="nav-list">
+                        <li class="active"><a href="#">Home</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Accesories</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </nav>
+                <div class="login-signup btns">
+                    <a href="#"class='btn'> Login<i class="ri-login-box-line"></i></a>
+                    <a href="#"class='btn'>  Sign Up<i class="ri-user-add-line"></i></a>
+                </div>
+            
+            </div>
+        </div>
+            
+    </header>
+    <!-- section swiper -->
+    <div class="silder">
+        <div class="container">
+          
+            <!-- swiper -->
+            <div class="siled-swp mySwiper">
+
+            </div>
+
+        </div>
+    </div>
+    <!-- section banners-->
+     <div class="banners-4">
+        <div class="container">
+            <!-- box-1 -->
+            <div class="box">
+                <a href="#" class="link-btn"></a>
+
+                <img src="img/banner3_1.png" alt="">
+                <div class="text">
+                    <h5>Break Disc</h5>
+                    <h5>deals on this</h5>
+                    <div class="sale">
+                        <p>Up <br> To</p>
+                        <span>70%</span>
+                      
+                    </div> 
+                     <h6>Shop Now</h6>
+
+                </div>
+
+            </div>
+            <!-- box-2 -->
+            <div class="box">
+                <a href="#" class="link-btn"></a>
+
+                <img src="img/banner3_2.png" alt="">
+                <div class="text">
+                    <h5>Break Disc</h5>
+                    <h5>deals on this</h5>
+                    <div class="sale">
+                        <p>Up <br> To</p>
+                        <span>70%</span>
+                       
+                    </div>
+                    <h6>Shop Now</h6> 
+                </div>
+
+            </div>
+            <!-- box-3 -->
+            <div class="box">
+                <a href="#" class="link-btn"></a>
+
+                <img src="img/banner3_3.png" alt="">
+                <div class="text">
+                    <h5>Break Disc</h5>
+                    <h5>deals on this</h5>
+                    <div class="sale">
+                        <p>Up <br> To</p>
+                        <span>70%</span>
+                        
+                    </div> 
+                    <h6>Shop Now</h6>
+
+                </div>
+
+            </div>
+            <!-- box-4-->
+            <div class="box">
+                <a href="#" class="link-btn"></a>
+
+                <img src="img/banner3_4.png" alt="">
+                <div class="text">
+                    <h5>Break Disc</h5>
+                    <h5>deals on this</h5>
+                    <div class="sale">
+                        <p>Up <br> To</p>
+                        <span>70%</span>
+                        
+                    </div> 
+                    <h6>Shop Now</h6>
+
+                </div>
+
+            </div>
+        </div>
+     </div>
+
+
+    <script src="js/main.js"></script>
+</body>
+</html>
