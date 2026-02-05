@@ -15,6 +15,87 @@
    
 </head>
 <body>
+    <div class="cart ">
+        <!-- main cart -->
+        <div class="top-cart">
+            <h3>cart items: <span class="count-item-cart">0</span></h3>
+            <span onclick="openCart()" class="close-cart">
+                    <i class="ri-close-line nav__close" ></i>
+            </span>
+        </div>
+        <!-- details for item -->
+        <div class="items-in-cert" id="cart-items">
+            <!-- inf for item#1 -->
+            <div class="item-cart">
+                <img src="img/product/10.png" alt="">
+                <div class="content">
+                    <h4>Lorem ipsum dolor sit amet.</h4>
+                    <p class="price_cart">%80</p>
+                    <div class="quantity_control">
+                        <button class="decrease_quantity">
+                            -
+                        </button>
+                         <span class="quantity">
+                            3
+        
+                        </span>
+                        <button class="increase_quantity">
+                            +
+                        </button>
+                    </div>
+
+                </div>
+                <button class="delete-itme">
+                      <i class="ri-close-line nav__close" ></i>
+                </button>
+
+            </div>
+            <!-- inf for item#2 -->
+            <div class="item-cart">
+                <img src="img/product/15.png" alt="">
+                <div class="content">
+                    <h4>Lorem ipsum dolor sit amet.</h4>
+                    <p class="price_cart">%80</p>
+                    <div class="quantity_control">
+                        <button class="decrease_quantity">
+                            -
+                        </button>
+                         <span class="quantity">
+                            3
+        
+                        </span>
+                        <button class="increase_quantity">
+                            +
+                        </button>
+                    </div>
+
+                </div>
+                <button class="delete-itme">
+                      <i class="ri-close-line nav__close" ></i>
+                </button>
+
+            </div>
+
+
+
+        </div>
+        <!-- checkbox -->
+        <div class="bottom-cart">
+            <div class="total">
+                <p>subtotal</p>
+                <p class="price_cart-total">
+                    $0
+                </p>
+
+            </div>
+            <div class="button_cart">
+                <a href="#" class="btn_cart btn"> checkout</a>
+                <span onclick="openCart()" class="btn_cart trans_bg btn">
+                    shop more
+                </span>
+            </div>
+        </div>
+    </div>
     <header>
         <!-- TOP -->
         <div class="top-header">
@@ -53,7 +134,7 @@
         </a>
     </div>
 
-    <div class="icon">
+    <div onclick="openCart()" class="icon">
         <a href="#">
             <i class="ri-shopping-cart-line"></i>
             <span class="count count-item-header">0</span>
@@ -275,6 +356,7 @@
                 </div> 
              </div>
          </div>
+         <!-- banners #3 -->
            
          <div class="banners">
             <div class="container">
