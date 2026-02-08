@@ -14,7 +14,8 @@
      <link rel="stylesheet" href="css/style.css">
    
 </head>
-<body>
+<body> 
+    <!-- site cart -->
     <div class="cart ">
         <!-- main cart -->
         <div class="top-cart">
@@ -26,55 +27,8 @@
         <!-- details for item -->
         <div class="items-in-cert" id="cart-items">
             <!-- inf for item#1 -->
-            <div class="item-cart">
-                <img src="img/product/10.png" alt="">
-                <div class="content">
-                    <h4>Lorem ipsum dolor sit amet.</h4>
-                    <p class="price_cart">%80</p>
-                    <div class="quantity_control">
-                        <button class="decrease_quantity">
-                            -
-                        </button>
-                         <span class="quantity">
-                            3
-        
-                        </span>
-                        <button class="increase_quantity">
-                            +
-                        </button>
-                    </div>
-
-                </div>
-                <button class="delete-itme">
-                      <i class="ri-close-line nav__close" ></i>
-                </button>
-
-            </div>
-            <!-- inf for item#2 -->
-            <div class="item-cart">
-                <img src="img/product/15.png" alt="">
-                <div class="content">
-                    <h4>Lorem ipsum dolor sit amet.</h4>
-                    <p class="price_cart">%80</p>
-                    <div class="quantity_control">
-                        <button class="decrease_quantity">
-                            -
-                        </button>
-                         <span class="quantity">
-                            3
-        
-                        </span>
-                        <button class="increase_quantity">
-                            +
-                        </button>
-                    </div>
-
-                </div>
-                <button class="delete-itme">
-                      <i class="ri-close-line nav__close" ></i>
-                </button>
-
-            </div>
+          
+           
 
 
 
@@ -96,6 +50,7 @@
             </div>
         </div>
     </div>
+    <!--  nav-header  -->
     <header>
         <!-- TOP -->
         <div class="top-header">
@@ -149,7 +104,7 @@
         <div class="nav-header">
             <div class="container">
                     <nav class="nav">
-                        <span class="open-menu">
+                        <span onclick="openNavList()" class="open-menu">
                             <i class="ri-menu-line"></i>
                         </span>
                     <div class="category-nav">
@@ -171,7 +126,7 @@
                          </div>
                     </div>
                     <ul class="nav-list">
-                        <span class="close-menu">
+                        <span onclick="openNavList()" class="close-menu">
                               <i class="ri-close-line nav__close"></i>
                         </span>
                       
@@ -481,12 +436,14 @@
 
            </footer>
       
+  
+   
         <!-- Swiper JS -->
       <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
-       <!-- js -->
-   <script src="js/items-home.js"></script>
 
-<script src="js/main.js"></script>
+    <!-- js -->
 <script src="js/swiper.js"></script>
+ <script src="js/items-home.js"></script>
+<script src="js/main.js"></script>
 </body>
 </html>

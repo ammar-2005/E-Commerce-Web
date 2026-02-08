@@ -25,4 +25,23 @@
         prevEl:".swiper-button-prev"
       },
       loop:true,
+      breakpoints: {
+      1200: {
+        slidesPerView: 5,
+        spaceBetween: 20,
+      },
+    1000: {
+        slidesPerView: 4,
+        spaceBetween: 20,
+      },
+      700:{
+        slidesPerView: 3,
+        spaceBetween: 15,
+      },
+      0:{
+        slidesPerView: 1,
+        spaceBetween: 10,
+      }
+    
+    }
     });

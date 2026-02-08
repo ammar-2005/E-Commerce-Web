@@ -33,7 +33,7 @@ fetch('products.json')
                         <p class="old-price">$${product.old_price}</p>
                     </div>
                     <div class="icons">
-                        <span class="btn-add-cart">
+                        <span class="btn-add-cart" data-id="${product.id}">
                             <i class="ri-shopping-cart-line"></i> add to cart
                         </span>
                         <span class="icon-product">
@@ -72,7 +72,7 @@ fetch('products.json')
                        ${oldPricepargrahp}
                     </div>
                     <div class="icons">
-                        <span class="btn-add-cart">
+                       <span class="btn-add-cart" data-id="${product.id}">
                             <i class="ri-shopping-cart-line"></i> add to cart
                         </span>
                         <span class="icon-product">
@@ -113,7 +113,7 @@ fetch('products.json')
                        ${oldPricepargrahp}
                     </div>
                     <div class="icons">
-                        <span class="btn-add-cart">
+                        <span class="btn-add-cart" data-id="${product.id}">
                             <i class="ri-shopping-cart-line"></i> add to cart
                         </span>
                         <span class="icon-product">
@@ -154,7 +154,7 @@ fetch('products.json')
                        ${oldPricepargrahp}
                     </div>
                     <div class="icons">
-                        <span class="btn-add-cart">
+                        <span class="btn-add-cart" data-id="${product.id}">
                             <i class="ri-shopping-cart-line"></i> add to cart
                         </span>
                         <span class="icon-product">
