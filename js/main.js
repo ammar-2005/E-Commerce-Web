@@ -66,11 +66,22 @@ function updateCart() {
     const countItemCart = document.querySelector('.count-item-cart');
     const countItemHeader = document.querySelector('.count-item-header');
     const totalPriceElement = document.querySelector('.price_cart-total');
+    
 
     const Cart = JSON.parse(localStorage.getItem('cart')) || [];
-    
-    // تفريغ محتوى السلة القديم قبل التحديث لتجنب التكرار
-    cartItemsContainer.innerHTML = "";
+    const checkout = document.getElementById('checkout-items'); 
+      let itmesInput = document.getElementById('item');
+            let totalInput = document.getElementById('total-price');
+            let countInput = document.getElementById('count-item');
+    // if the info here 
+    if(checkout){
+            checkout.innerHTML ="";
+               itmesInput.value = JSON.stringify(Cart);
+            totalInput.value = Cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
+            countInput.value = Cart.reduce((sum, item) => sum + item.quantity, 0);
+         
+          
+    }
     
     let total = 0;
     let totalCount = 0;
@@ -79,13 +90,17 @@ function updateCart() {
         total += item.price * item.quantity;
         totalCount += item.quantity;
 
+
+
+        // check out inputs
+
         // بناء الـ HTML الخاص بكل منتج داخل السلة
         cartItemsContainer.innerHTML += `
             <div class="item-cart">
                 <img src="${item.img}" alt="${item.name}">
                 <div class="content">
                     <h4>${item.name}</h4>
-                    <p class="price_cart">$${item.price}</p>
+                    <p class="price_cart">$${item.quantity}</p>
                     <div class="quantity_control">
                         <button onclick="changeQuantity(${index}, -1)">-</button>
                         <span class="quantity">${item.quantity}</span>
@@ -96,14 +111,53 @@ function updateCart() {
                     <i class="ri-close-line"></i>
                 </button>
             </div>
-        `;
+        `
+        if(checkout){
+            checkout.innerHTML += `
+             <!-- item-1 -->
+                        <div class="item-cart">
+                            <div class="image-name">
+                                <img src="${item.img}" alt="${item.name}"> <div class="content">
+                                <h4>${item.name}.</h4>
+                                <p class="price-cart">$${item.quantity}</p>
+                                <div class="quntity-control">
+                                    <button class="decrease-quantity" onclick="changeQuantity(${index}, -1)"> -</button>
+                                     <span class="quantity">${item.quantity}</span>
+                                    <button class="increase-quantity" onclick="changeQuantity(${index}, 1)"> +</button>
+                                </div>
+
+                            </div>
+                            </div>
+
+                            <button class="delete-item" onclick="removeFromCart(${index})" > <i class="ri-close-line"></i></button>
+                           
+                        </div>
+
+
+            `
+            
+        }
+
+
+
+
+        ;
     });
+if(checkout){
+    const subtotal = document.querySelector(".subtotal-checkout");
+    const total = document.querySelector(".total-checkout");
+    subtotal.innerHTML= ` $${total.toFixed(2)}`
+}
+
 
     // تحديث الأرقام الإجمالية في الهيدر والسلة
     if(countItemCart) countItemCart.innerHTML = totalCount;
     if(countItemHeader) countItemHeader.innerHTML = totalCount;
-    if(totalPriceElement) totalPriceElement.innerHTML = `$${total.toFixed(2)}`;
+    if(totalPriceElement) totalPriceElement.innerHTML = `$${total.toFixed(2)}`; 
 }
+
+
+
 
 // --- 5. دالة حذف منتج من السلة ---
 function removeFromCart(index) {

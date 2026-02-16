@@ -1,0 +1,292 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Oswald:wght@200..700&family=Raleway:wght@428&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&family=Tajawal:wght@200;300;400;500;700;800;900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+     font-family: "Inter", sans-serif;
+     color: var(--color-heading);
+     text-transform: capitalize;
+}
+:root{
+    --main-color : #ff8716;
+    --p-color : #7b7b7b;
+    --bg-color : #f3f3f3f3;
+    --white-color : #ffff;
+    --color-heading : #121416;
+    --border-color : #e5e5e5d5;
+    --sale-color : #E51A1A;
+} 
+body{
+    padding-top: 180px;
+}
+span{
+    color: var(--main-color);
+}
+p{
+    color: var(--p-color);
+}
+h1,h2,h3,h4,h5,h6{
+    color: var(--color-heading);
+    font-family: "Open Sans", sans-serif;
+}
+img{
+    width: 100px;
+}
+input,select,form , button{
+    border: none;
+    outline: none;
+}
+.btns{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.btn{
+  padding: 10px 15px;
+  text-transform: capitalize;
+  border-radius: 2px;
+  cursor: pointer;
+  background: var(--main-color);
+  color: var(--white-color);
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  transition: .3s;
+}
+.btn li{
+    color: var(--white-color);
+}
+.btn:hover{
+    scale: 1.1;
+}
+.container{
+    width: 90%;
+    margin: auto;
+    max-width: 1350px;
+  
+}
+
+.checkout{
+    margin: 50px 0px;
+}
+.checkout .container{
+ display: flex;
+ align-items: center;
+ justify-content: space-between;
+}
+.checkout .ordersummary{
+    width: 49%;
+    padding: 0px 20px;
+    border: 2px solid var(--border-color);
+    border-radius: 5px;
+    box-shadow: 0px 8px 10px #c0bfbf44;
+}
+.checkout .ordersummary h1{
+    border-bottom: 1px solid var(--border-color);
+    padding: 20px 0px;
+    margin-bottom: 20px;
+    color: var(--main-color);
+}
+.checkout .ordersummary .items{
+    height: 350px;
+    overflow-y: auto;
+
+}
+.checkout .ordersummary .item-cart{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    justify-content: space-between;
+    height: 125px;
+    border-bottom: 1px solid var(--border-color);
+    padding-right: 20px;
+
+}
+.checkout .ordersummary .item-cart:last-child{
+    border-bottom: 0;
+}
+.checkout .ordersummary .item-cart .image-name{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.checkout .ordersummary .item-cart .image-name img{
+    width: 80px;
+}
+.checkout .ordersummary .item-cart h4{
+    margin-bottom: 10px;
+    font-size: 14px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+.checkout .ordersummary .delete-item i{
+    font-size: 22px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.checkout .ordersummary .delete-item i:hover{
+    color: #E51A1A;
+    scale: 1.3;
+}
+.checkout .ordersummary .quntity-control{
+ display: flex;
+ align-items: center;
+ gap: 5px;
+ margin-top: 5px;
+}
+.checkout .ordersummary .quntity-control span{
+    font-size: 18px;
+    min-width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--bg-color);
+    border: 1px solid var(--border-color);
+    padding: 3px 0px;
+}
+.checkout .ordersummary .quntity-control button{
+    width: 27px;
+    height: 27px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 20px;
+    border-radius: 2px;
+    border: 1px solid var(--border-color);
+}
+.checkout .ordersummary .bottom-summary{
+    border-top: 1px solid var(--border-color);
+    padding-top: 25px;
+
+}
+.checkout .ordersummary .shop-table{
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.checkout .ordersummary .shop-table p{
+  font-size: 20px;
+  color: var(--color-heading);
+
+}
+.checkout .ordersummary .shop-table span{
+    font-weight: bold;
+    font-size: 20px;
+  
+
+}
+.checkout .ordersummary .button-div{
+    border-top: 1px solid var(--border-color);
+    padding: 30px 0px;
+}
+.checkout .ordersummary .button-div button{
+    width: 100%;
+    background: var(--main-color);
+    color: var(--white-color);
+    border: 2px solid var(--main-color);
+    padding: 15px 0px;
+    outline: none;
+    border-radius: 3px;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+
+}
+.checkout .ordersummary .button-div button:hover{
+    background: transparent;
+    color: var(--main-color);
+}
+.checkout  .input-info{
+    width: 49%;
+}
+.checkout  .input-info h2{
+    padding: 10px 20px;
+    background: var(--main-color);
+    color: var(--white-color);
+}
+.checkout  .input-info .address,
+.checkout  .input-info .coupon{
+    margin-bottom: 25px;
+    border-radius: 5px;
+    overflow: hidden;
+    border: 1px solid var(--border-color);
+    box-shadow: 0px 8px 10px #c0bfbf44;
+}
+.checkout  .input-info  .inputs{
+    display: flex;
+    flex-direction: column;
+    padding: 15px 20px;
+
+}
+.checkout  .input-info  .inputs label
+{
+    color: var(--color-heading);
+    font-size: 14px;
+}
+.checkout  .input-info  .inputs input{
+    margin: 8px 0px 22px;
+    padding: 15px 20px;
+    outline: none;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    transition: 0.3s ;
+}
+.checkout  .input-info  .inputs input:focus{
+    border-color: var(--main-color) ;
+}
+
+
+ 
+.checkout  .input-info .coupon .btn-coupon{
+    text-align: center;
+    padding-bottom: 20px;
+}
+.checkout  .input-info .coupon .btn-coupon button{
+    width: 50%;
+    background: var(--main-color);
+    color: var(--white-color);
+    border: 2px solid var(--border-color);
+    padding: 12px 0px;
+    outline: none;
+    border-radius: 2px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+.checkout  .input-info .coupon .btn-coupon button:hover{
+    background: transparent;
+    color: var(--main-color);
+    scale: 1.1;
+}
+
+  /* responsive  */
+  @media (max-width: 1000px) {
+    .checkout .container {
+        flex-direction: column;
+        gap: 50px;
+    }
+    .checkout .ordersummary,
+    .checkout .input-info {
+        width: 80%;
+    }
+  }
+  @media (max-width: 500px) {
+ 
+    .checkout .ordersummary,
+    .checkout .input-info {
+        width: 100%;
+    }
+      .checkout .input-info  h2{
+         font-size: 20px;
+      }
+  }

@@ -1000,7 +1000,36 @@ right: 0;
          width: 100%;
           right: -100%;
        }
+       .banners-4 .container .box{
+        width: 100%;
+        margin-bottom: 20px;
+       }
+       .banners-4 .container .box h5{
+        font-size: 14px;
+       }
+       .banners-4 .container .box h6{
+        font-size: 13px;
+       }
+      .product .icons .btn-add-cart.active{
+      font-size: 13px;
+      }
+      .product .icons .btn-add-cart.active i{
+        font-size: 14px;
+      }
+      .banners  .banners-boxs.banner-3-img .box{
+        width: 100%;
 
+      }
+      footer .container .row{
+        width: 100%;
+      }
+       footer .container .big-row{
+        width: 100%;
+       }
+       footer .bottom-footer .container{
+        flex-direction: column;
+        gap: 10px;
+       }
   }
 
 /* end responsive */

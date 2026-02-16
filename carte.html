@@ -3,9 +3,352 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>online store</title> 
+     <!-- img website -->
+      <link rel="shortcut icon" href="img/icon.png" type="image/x-icon"> 
+      <!-- icons -->
+       <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+       
+    <!-- link css-->
+     <link rel="stylesheet" href="css/carte.css">
+     <link rel="stylesheet" href="css/style.css">
+   
 </head>
-<body>
-    
+<body> 
+    <!-- site cart -->
+    <div class="cart ">
+        <!-- main cart -->
+        <div class="top-cart">
+            <h3>cart items: <span class="count-item-cart">0</span></h3>
+            <span onclick="openCart()" class="close-cart">
+                    <i class="ri-close-line nav__close" ></i>
+            </span>
+        </div>
+        <!-- details for item -->
+        <div class="items-in-cert" id="cart-items">
+            <!-- inf for item#1 -->
+          
+           
+
+
+
+        </div>
+        <!-- checkbox -->
+        <div class="bottom-cart">
+            <div class="total">
+                <p>subtotal</p>
+                <p class="price_cart-total">
+                    $0
+                </p>
+
+            </div>
+            <div class="button_cart">
+                <a href="#" class="btn_cart btn"> checkout</a>
+                <span onclick="openCart()" class="btn_cart trans_bg btn">
+                    shop more
+                </span>
+            </div>
+        </div>
+    </div>
+    <!--  nav-header  -->
+    <header>
+        <!-- TOP -->
+        <div class="top-header">
+            <div class="container">
+                <a href="#" class="logo"><img src="img/logo.png" alt=""></a>
+
+                <!-- form -->
+                 <form action="" class="search-box">
+                    <div class="select-box">
+                        <select id="category" class="category">
+                             <option value="All Category">All Category</option>
+                             <option value="Electronics & Digita">Electronics & Digita</option>
+                             <option value="Phone & Tablet">Phone & Tablet</option>
+                             <option value="Fashion & Clothings">Fashion & Clothings</option>
+                             <option value="Telivsion & Monitor">Telivsion & Monitor</option>
+                             <option value="Jewelry & Watches">Jewelry & Watches</option>
+                             <option value="Washing & Machine">Washing & Machine</option>
+                             <option value="Toys & Hobbies">Toys & Hobbies</option>
+
+                        </select>
+
+                    </div>
+                      
+                    <input type="text" id="search" name="search" placeholder="Search for Products" required>
+                     
+                    <button type="submit">
+                       <i class="ri-search-line"></i>
+                    </button>
+
+                 </form>
+                 <div class="header-icons">
+    <div class="icon">
+        <a href="#"> 
+            <i class="ri-heart-line"></i>
+            <span class="count count-favorite">0</span> 
+        </a>
+    </div>
+
+    <div onclick="openCart()" class="icon">
+        <a href="#">
+            <i class="ri-shopping-cart-line"></i>
+            <span class="count count-item-header">0</span>
+        </a>
+    </div>
+</div>
+                 </div>
+            </div>
+        </div>
+        <!-- NAV -->
+           
+        <div class="nav-header">
+            <div class="container">
+                    <nav class="nav">
+                        <span onclick="openNavList()" class="open-menu">
+                            <i class="ri-menu-line"></i>
+                        </span>
+                    <div class="category-nav">
+                        <div  class="category-btn" onclick=" Opencategory()">
+                            <i class="ri-menu-line"></i>
+                            <p>Browser Category</p>
+                            <i class="ri-arrow-down-s-line">
+                    
+                            </i>
+                        </div>
+                         <div class="category-nav-list" >
+                            <a href="#">Top 10 offers</a>
+                            <a href="#">Electronics & Digita</a>
+                            <a href="#">Phone & Tablet</a>
+                            <a href="#">Fashion & Clothings</a>
+                            <a href="#">Telivsion & Monitor</a>
+                            <a href="#">Jewelry & Watches</a>
+                            <a href="#">Toys & Hobbies</a>
+                         </div>
+                    </div>
+                    <ul class="nav-list">
+                        <span onclick="openNavList()" class="close-menu">
+                              <i class="ri-close-line nav__close"></i>
+                        </span>
+                      
+                        <li class="active"><a href="index.html">Home</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Accesories</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </nav>
+                <div class="login-signup btns">
+                    <a href="login.html"class='btn'> Login<i class="ri-login-box-line"></i></a>
+                    <a href="#"class='btn'>  Sign Up<i class="ri-user-add-line"></i></a>
+                </div>
+            
+            </div>
+        </div>
+            
+    </header>
+    <section class="checkout">
+        <form id="form-contact"  method="post" action="https://script.google.com/macros/s/AKfycbwkYgBn0UdlTVNy37fd5pMUPkCvVOzWZnF330ooDuSTxumVlpfaJxrvKIkfKdlgXaPW/exec">
+
+             <input type="hidden" id="item" name="item">
+             <input type="hidden" id="total-price" name="total">
+             <input type="hidden" id="count-item" name="count-item">
+            <div class="container">
+                <div class="ordersummary">
+                     <h1>order summary</h1>
+                     <div class="items" id="checkout-items">
+                        <!-- item-1 -->
+                        <!-- <div class="item-cart">
+                            <div class="image-name">
+                                <img src="img/product/10.png" alt=""> <div class="content">
+                                <h4>Lorem ipsum dolor sit amet.</h4>
+                                <p class="price-cart">$29.99</p>
+                                <div class="quntity-control">
+                                    <button class="decrease-quantity"> -</button>
+                                     <span class="quantity">1</span>
+                                    <button class="increase-quantity"> +</button>
+                                </div>
+
+                            </div>
+                            </div>
+
+                            <button class="delete-item"> <i class="ri-close-line"></i></button>
+                           
+                        </div> -->
+                        <!-- item-2 -->
+                        <!-- <div class="item-cart">
+                            <div class="image-name">
+                                <img src="img/product/10.png" alt=""> <div class="content">
+                                <h4>Lorem ipsum dolor sit amet.</h4>
+                                <p class="price-cart">$29.99</p>
+                                <div class="quntity-control">
+                                    <button class="decrease-quantity"> -</button>
+                                     <span class="quantity">1</span>
+                                    <button class="increase-quantity"> +</button>
+                                </div>
+
+                            </div>
+                            </div>
+
+                            <button class="delete-item"> <i class="ri-close-line"></i></button>
+                           
+                        </div> -->
+
+                     </div>
+
+                          <!-- more details -->
+                     <div class="bottom-summary">
+                        <!-- 1 -->
+                        <div class="shop-table">
+                            <p>subtotal: </p>
+                            <span class="subtotal-checkout">
+                                $325.00
+                            </span>
+                        </div>
+                        <!-- 2 -->
+                        <div class="shop-table">
+                            <p>shipping: </p>
+                            <span class="subtotal-checkout">
+                                $35.00
+                            </span>
+                        </div>
+                        <!-- 3 -->
+                        <div class="shop-table">
+                            <p>total: </p>
+                            <span class=" ">
+                                $325.00
+                            </span>
+                        </div>
+                        <!-- button -->
+                         <div class="button-div">
+                            <button type="submit"> place order</button>
+                         </div>
+                     </div>
+                </div>
+                <div class="input-info">
+                    <!-- info for order -->
+                   <div class="address">
+                    
+                    <h2>delivery address</h2>
+                        <div class="inputs">
+                            <label for="">email</label>
+                            <input type="email" placeholder="enter your email" name="Email" required>
+                            <label for="">name</label>
+                            <input type="text" placeholder="enter your name" name="Name" required>
+                            <label for="">address</label>
+                            <input type="text" placeholder="enter your address" name="Address" required>
+                            <label for="">phone</label>
+                            <input type="number" placeholder="enter your phone" name="Phone" required>
+                        </div>
+
+                   </div>
+
+                   <div class="coupon">
+                    <h2>coupon code</h2>
+                    <div class="inputs">
+                              <label for="">coupon <code></code></label>
+                            <input type="text" placeholder="enter your coupon code" >
+
+                    </div>
+                    <div class="btn-coupon">
+                        <button>  apply coupon</button>
+                    </div>
+                   </div>
+
+
+                </div>
+            </div>
+        </form>
+    </section>
+   
+
+
+
+
+
+          <!-- footer -->
+           <footer>
+            <div class="container">
+                <div class="big-row">
+                    <img src="img/white_logo.png" alt="" class="logo-footer">
+
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil, a.
+                    </p>
+                    <div class="icons-footer">
+                        
+                        <a href="#"> <i class="ri-facebook-box-fill"></i></a>
+                        <a href="#">  <i class="ri-twitter-fill"></i></a>
+                        <a href="#">  <i class="ri-instagram-fill"></i></a>
+                        <a href="#">  <i class="ri-youtube-fill"></i></a>
+                    </div>
+                </div> 
+                <!-- row-1 -->
+                <div class="row">
+                    <h4>Find It Fast</h4>
+                    <div class="links">
+                    <a href="#"> <i class="ri-arrow-right-line"></i>
+                       Laptop & Computers</a>
+                    <a href="#"> <i class="ri-arrow-right-line"></i>
+                      Smart Phone & Tablets</a>
+                    <a href="#"> <i class="ri-arrow-right-line"></i>
+                      Tv & Audio</a>
+                    <a href="#"> <i class="ri-arrow-right-line"></i>
+                       Appliances</a>
+                    <a href="#"> <i class="ri-arrow-right-line"></i>
+                       Jewelry & Watches</a>
+                    </div>
+                </div>
+                <!-- row-2 -->
+                <div class="row">
+                    <h4>Quick Links</h4>
+                    <div class="links">
+                    <a href="#"> <i class="ri-arrow-right-line"></i>
+                       your account</a>
+                    <a href="#"> <i class="ri-arrow-right-line"></i>
+                     returns & exchanges</a>
+                    <a href="#"> <i class="ri-arrow-right-line"></i>
+                      shipping & delivery</a>
+                    <a href="#"> <i class="ri-arrow-right-line"></i>
+                       estimated delivery time</a>
+                    <a href="#"> <i class="ri-arrow-right-line"></i>
+                       purchase hisotry</a>
+                    </div>
+                </div>
+                <!-- row-3 -->
+                <div class="row"> 
+                    <h4>Service</h4>
+                    <div class="links">
+                    <a href="#"> <i class="ri-arrow-right-line"></i>
+                       Support Center</a>
+                    <a href="#"> <i class="ri-arrow-right-line"></i>
+                      Term & Conditions</a>
+                    <a href="#"> <i class="ri-arrow-right-line"></i>
+                     Privacy Policy</a>
+                    <a href="#"> <i class="ri-arrow-right-line"></i>
+                       Help</a>
+                    <a href="#"> <i class="ri-arrow-right-line"></i>FAQS</a>
+                    </div>
+                      
+                </div>
+            </div>
+            <div class="bottom-footer">
+                <div class="container">
+                    <p> &copy; <span>Reda store.</span>all rights reserved</p>
+                </div>
+                <div class="payment-img">
+                    <img src="img/payment_method.png" alt="">
+
+                </div>
+            </div>
+
+           </footer>
+      
+  
+   
+     
+
+    <!-- js -->
+ <script src="js/submite-checkout.js"></script>
+
+<script src="js/main.js"></script>
 </body>
 </html>
